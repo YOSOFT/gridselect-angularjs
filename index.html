@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.css">
+    <style>
+        .centrar {
+            display: flex;
+            align-items: center;
+
+        }
+        /* * {
+            outline: 1px solid red;
+        } */
+    </style>
+</head>
+
+<body ng-app="grid">
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div ng-controller="selectionController">
+            <div class="row centrar">
+                <div class="col-md-5">
+                    <div class="panel">
+                        <div>
+                            <div style="height: 495px;" ui-grid="gridOptions" ui-grid-selection></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="btn-group-vertical" role="group">
+                        <button type="button" class="btn btn-default" ng-click="vm.agregar()" aria-label="Agregar">
+                            <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="Quitar">
+                            <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="panel">
+                        <div>
+                            <div style="height: 495px;" ui-grid="gridPlanillaOptions" ui-grid-selection></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+    <script src="selection/selectionController.js"></script>
+</body>
+
+</html>
